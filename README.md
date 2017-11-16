@@ -12,7 +12,7 @@ This document assumes you are working with a web application or a medium that su
 
 Instructions for embedded hardware code and CLI tools coming soon.
 
-### Register a new Hack for the Sea Application
+### I. Register a new Hack for the Sea Application
 
 The Data Lake requires oAuth to use. Here's how to get credentials
 
@@ -27,7 +27,7 @@ The Data Lake requires oAuth to use. Here's how to get credentials
    * **Authorization grant type**: Select _Authorization Code_ for now.
    * **Redirect uris** The URL that you wish to be redirected back to after authentication is complete. Typically the URL of your application itself.
    
-### Authenticate Your Application
+### II. Authenticate Your Application
 
 xxx yyy
 
