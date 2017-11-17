@@ -84,6 +84,14 @@ $.ajax({
 });
 ```
 
+DELETE:
+```javascript
+$.ajax({
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e315b46e0fb002866b437?access_token=[ACCESS_TOKEN]",
+  type: "DELETE"
+});
+```
+
 ## Maintainers
 
 Mark Henderson
