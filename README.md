@@ -4,10 +4,6 @@
 
 ## Installation / Getting Started
 
-Coming soon
-
-## Usage
-
 This document assumes you are working with a web application or a medium that supports HTTP.
 
 Instructions for embedded hardware code and CLI tools coming soon.
@@ -50,6 +46,28 @@ $.ajax({
     redirect_uri: "REDIRECT_URI_MUST_MATCH_YOUR_APP"
   }
 })
+```
+
+## Use the Data Lake!
+
+Here are some jQuery AJAX requests that work.
+
+GET:
+```
+$.ajax({
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=Uff3ZcNRoa0KdKsBpfALWQZ9L1yl92"
+});
+```
+
+POST:
+```
+$.ajax({
+  type: "POST",
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
+  contentType: "application/json",
+  dataType: "json",
+  data: JSON.stringify({ hellp: "world" })
+});
 ```
 
 ## Maintainers
