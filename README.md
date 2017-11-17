@@ -119,9 +119,9 @@ $.ajax({
 
 ## Data Lake Schema
 
-Objects in the data lake are stored in dot-notated keys, all beginning with `com.hackforthesea`. There are global objects, and project-spefific keys. The global objects are enumerated below, with links out to the individual projects as they are appropriate.
+Objects in the data lake are stored in dot-notated keys, all beginning with `com.hackforthesea`. There are global objects, and project-spefific keys. The global objects are enumerated below, with links out to the individual projects as they are appropriate. Note that keys are **singular** - location, beach, animal, etc.
 
-`com.hackforthesea.global.locations` - Terrestrial locations with geodata included. Currently beaches in MA.
+`com.hackforthesea.global.location` - Terrestrial locations with geodata included. Currently beaches in MA.
 
 ## Maintainers
 
@@ -130,7 +130,7 @@ Objects in the data lake are stored in dot-notated keys, all beginning with `com
 
 ## Contribute
 
-The best thing you can do to contribute to the data lake is to **put data into it!* That means following the example set in the [Usage](#usage) section to create an app and send data to it.
+The best thing you can do to contribute to the data lake is to **put data into it!** That means following the example set in the [Usage](#usage) section to create an app and send data to it.
 
 ## License
 
