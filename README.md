@@ -94,8 +94,8 @@ $.ajax({
 
 ## Maintainers
 
-Mark Henderson
-Sponsored by http://microshare.io
+* Mark Henderson (mark@mrh.io)
+* Sponsored by http://microshare.io
 
 ## Contribute
 
