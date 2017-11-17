@@ -55,7 +55,7 @@ Here are some jQuery AJAX requests that work.
 GET:
 ```
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=Uff3ZcNRoa0KdKsBpfALWQZ9L1yl92"
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
 });
 ```
 
