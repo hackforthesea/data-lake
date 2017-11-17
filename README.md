@@ -4,14 +4,14 @@
 
 ## Table of Contents
 
-* Installation / Getting Started
-  * I. Register a new Hack for the Sea Application
-  * II. Authenticate Your Application
-* Usage
-* Data Lake Schema
-* Maintainers
-* Contribute
-* License
+* [Installation / Getting Started](#installation--getting-started)
+  * [I. Register a new Hack for the Sea Application](#i-register-a-new-hack-for-the-sea-application)
+  * [II. Authenticate Your Application](#ii-authenticate-your-application)
+* [Usage](#usage)
+* [Data Lake Schema](#data-lake-schema)
+* [Maintainers](#maintainers)
+* [Contribute](#contribute)
+* [License](#license)
 
 ## Installation / Getting Started
 
