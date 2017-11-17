@@ -54,7 +54,7 @@ $.ajax({
 
 // Detail
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]"
 });
 ```
 
