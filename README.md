@@ -2,6 +2,17 @@
 
 > Repository for Hack for the Sea data. Sponsored by [Microshare](https://microshare.io).
 
+## Table of Contents
+
+* Installation / Getting Started
+  * I. Register a new Hack for the Sea Application
+  * II. Authenticate Your Application
+* Usage
+* Data Lake Schema
+* Maintainers
+* Contribute
+* License
+
 ## Installation / Getting Started
 
 This document assumes you are working with a web application or a medium that supports HTTP.
@@ -41,7 +52,7 @@ $.ajax({
 })
 ```
 
-## Use the Data Lake!
+## Usage
 
 Here are some jQuery AJAX requests that work.
 
