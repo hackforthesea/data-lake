@@ -29,7 +29,28 @@ The Data Lake requires oAuth to use. Here's how to get credentials
    
 ### II. Authenticate Your Application
 
-xxx yyy
+jQuery Example:
+```
+function getCookie(name)
+  {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+
+$.ajax({
+  url: "https://hackforthesea.tech/oauth/token/",
+  method: "POST",
+  data: {
+    csrfmiddlewaretoken: getCookie('csrftoken'),
+    grant_type: "authorization_code",
+    code: "AUTH_CODE_FROM_PREVIOUS_STEP",
+    client_id: "YOUR_CLIENT_ID",
+    client_secret: "YOUR_CLIENT_SECRET",
+    redirect_uri: "REDIRECT_URI_MUST_MATCH_YOUR_APP"
+  }
+})
+```
 
 ## Maintainers
 
