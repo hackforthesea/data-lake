@@ -52,6 +52,21 @@ $.ajax({
   url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
 });
 
+/******
+Available query string params for list view
+- details: boolean
+  Will return matching objects with their details, false will only return main information
+
+- page: int
+  Specifies the requested page, defaults to 1
+
+- perPage int
+  Specifies the number of objects to be returned per page, defaults to 999
+
+- sort: string
+  Specifies if sorting needs to be applied and to which field in the data
+********/
+
 // Detail
 $.ajax({
   url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]"
