@@ -106,6 +106,12 @@ $.ajax({
 });
 ```
 
+## Data Lake Schema
+
+Objects in the data lake are stored in dot-notated keys, all beginning with `com.hackforthesea`. There are global objects, and project-spefific keys. The global objects are enumerated below, with links out to the individual projects as they are appropriate.
+
+`com.hackforthesea.global.locations` - Terrestrial locations with geodata included. Currently beaches in MA.
+
 ## Maintainers
 
 * Mark Henderson (mark@mrh.io)
