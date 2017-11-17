@@ -52,6 +52,11 @@ $.ajax({
   url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
 });
 
+// List with tags - as many as you want
+$.ajax({
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]"
+});
+
 /******
 Available query string params for list view
 - details: boolean
@@ -78,6 +83,15 @@ POST:
 $.ajax({
   type: "POST",
   url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
+  contentType: "application/json",
+  dataType: "json",
+  data: JSON.stringify({ hellp: "world" })
+});
+
+// With tags
+$.ajax({
+  type: "POST",
+  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]",
   contentType: "application/json",
   dataType: "json",
   data: JSON.stringify({ hellp: "world" })
