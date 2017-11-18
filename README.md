@@ -33,8 +33,12 @@ The Data Lake requires oAuth to use. Here's how to get credentials
    * **Client type** Select _Confidential_ for now.
    * **Authorization grant type**: Select _Authorization Code_ for now.
    * **Redirect uris** The URL that you wish to be redirected back to after authentication is complete. Typically the URL of your application itself.
-   
-### II. Authenticate Your Application
+
+### II. Construct an Authorization URL and Obtain an Authorization Code
+
+1. Visit this URL: https://hackforthesea.tech/oauth/authorize/?response_type=code&state=random_state_string&client_id=[YOUR_CLIENT_ID], substituting YOUR_CLIENT_ID with the client ID of the application you created. 
+
+### III. Authenticate Your Application
 
 jQuery Example:
 ```javascript
