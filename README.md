@@ -70,12 +70,12 @@ Here are some jQuery AJAX requests that work.
 ```javascript
 // List
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
 });
 
 // List with tags - as many as you want
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]"
 });
 
 /******
@@ -95,7 +95,7 @@ Available query string params for list view
 
 // Detail
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]"
 });
 ```
 
@@ -103,7 +103,7 @@ $.ajax({
 ```javascript
 $.ajax({
   type: "POST",
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
   contentType: "application/json",
   dataType: "json",
   data: JSON.stringify({ hellp: "world" })
@@ -112,7 +112,7 @@ $.ajax({
 // With tags
 $.ajax({
   type: "POST",
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]",
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]",
   contentType: "application/json",
   dataType: "json",
   data: JSON.stringify({ hellp: "world" })
@@ -122,7 +122,7 @@ $.ajax({
 ### Deleting Data
 ```javascript
 $.ajax({
-  url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e315b46e0fb002866b437?access_token=[ACCESS_TOKEN]",
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/5a0e315b46e0fb002866b437?access_token=[ACCESS_TOKEN]",
   type: "DELETE"
 });
 ```
