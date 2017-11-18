@@ -37,7 +37,9 @@ The Data Lake requires oAuth to use. Here's how to get credentials
 
 ### II. Construct an Authorization URL and Obtain an Authorization Code
 
-1. Visit this URL: https://hackforthesea.tech/oauth/authorize/?response_type=code&state=random_state_string&client_id=[YOUR_CLIENT_ID], substituting YOUR_CLIENT_ID with the client ID of the application you created. 
+1. Visit this URL: https://hackforthesea.tech/oauth/authorize/?response_type=code&state=random_state_string&client_id=[YOUR_CLIENT_ID], substituting YOUR_CLIENT_ID with the client ID of the application you created.
+2. Review the permissions requested by the application, and click "Approve"
+3. You will then be redirected to your applications Redirect URI, which will have a "code" parameter, like this: https://[REDIRECT_URI]/?state=random_state_string&code=j7SAsPilPPIWHmJ05tiEd02t4hWQAJ
 
 ### III. Authenticate Your Application
 
