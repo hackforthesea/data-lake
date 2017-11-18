@@ -63,7 +63,7 @@ $.ajax({
 
 Here are some jQuery AJAX requests that work.
 
-GET:
+### Listing and Retrieving Data
 ```javascript
 // List
 $.ajax({
@@ -96,7 +96,7 @@ $.ajax({
 });
 ```
 
-POST:
+### Posting Data
 ```javascript
 $.ajax({
   type: "POST",
@@ -116,7 +116,7 @@ $.ajax({
 });
 ```
 
-DELETE:
+### Deleting Data
 ```javascript
 $.ajax({
   url: "https://hackforthesea-aphelionz.c9users.io/data/com.hackforthesea.globals/5a0e315b46e0fb002866b437?access_token=[ACCESS_TOKEN]",
