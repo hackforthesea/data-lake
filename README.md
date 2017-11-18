@@ -6,7 +6,8 @@
 
 * [Installation / Getting Started](#installation--getting-started)
   * [I. Register a new Hack for the Sea Application](#i-register-a-new-hack-for-the-sea-application)
-  * [II. Authenticate Your Application](#ii-authenticate-your-application)
+  * [II. Construct an Authorization URL and Obtain an Authorization Code]()
+  * [III. Authenticate Your Application](#iii-authenticate-your-application)
 * [Usage](#usage)
 * [Data Lake Schema](#data-lake-schema)
 * [Maintainers](#maintainers)
