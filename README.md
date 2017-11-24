@@ -106,7 +106,7 @@ $.ajax({
   url: "https://hackforthesea.tech/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
   contentType: "application/json",
   dataType: "json",
-  data: JSON.stringify({ hellp: "world" })
+  data: JSON.stringify({ hello: "world" })
 });
 
 // With tags
@@ -115,7 +115,7 @@ $.ajax({
   url: "https://hackforthesea.tech/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]",
   contentType: "application/json",
   dataType: "json",
-  data: JSON.stringify({ hellp: "world" })
+  data: JSON.stringify({ hello: "world" })
 });
 ```
 
