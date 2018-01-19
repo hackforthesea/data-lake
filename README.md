@@ -58,6 +58,14 @@ $.ajax({
     client_id: "YOUR_CLIENT_ID",
     client_secret: "YOUR_CLIENT_SECRET",
     redirect_uri: "REDIRECT_URI_MUST_MATCH_YOUR_APP"
+  },
+  success: function(res) {
+    setCookie('h4ts_access_token', res.access_token);
+    setCookie('h4ts_token_type', res.token_type);
+    setCookie('h4ts_expires_in', res.expires_in);
+    setCookie('h4ts_refresh_token', res.refresh_token);
+    setCookie('h4ts_scope', res.scope);
+    window.location = "/app";
   }
 })
 ```
