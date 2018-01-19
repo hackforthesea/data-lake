@@ -78,12 +78,18 @@ Here are some jQuery AJAX requests that work.
 ```javascript
 // List
 $.ajax({
-  url: "https://hackforthesea.tech/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals?access_token=[ACCESS_TOKEN]",
+  success: function(response) {
+    console.log(response);
+  }
 });
 
 // List with tags - as many as you want
 $.ajax({
-  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/tags/tag1/tag2/etc?access_token=[ACCESS_TOKEN]",
+  success: function(response) {
+    console.log(response);
+  }
 });
 
 /******
@@ -103,7 +109,10 @@ Available query string params for list view
 
 // Detail
 $.ajax({
-  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]"
+  url: "https://hackforthesea.tech/data/com.hackforthesea.globals/5a0e304946e0fb0022f6f40d?access_token=[ACCESS_TOKEN]",
+  success: function(response) {
+    console.log(response);
+  }
 });
 ```
 
