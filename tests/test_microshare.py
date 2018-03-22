@@ -16,20 +16,6 @@ MICROSHARE_SECRET = os.environ["MICROSHARE_SECRET"]
 TEST_AUTH_URL="https://dauth.microshare.io"
 TEST_URL="https://dapi.microshare.io"
 
-def authentication_headers():
-    url = "{}/oauth2/token?username={}&password={}&client_id={}&grant_type=password&scope=ALL:ALL" \
-        .format(TEST_AUTH_URL, MICROSHARE_USERNAME, MICROSHARE_PASSWORD, MICROSHARE_API_KEY)
-
-    response = post(url)
-    json = response.json()
-
-    token = json.get('access_token')
-    headers = {
-        "Authorization": "Bearer {}".format(token)
-    }
-
-    return headers
-
 
 def cleantags(tags):
     if tags:
@@ -40,12 +26,42 @@ def cleantags(tags):
 
 
 class TestDataLake(unittest.TestCase):
+    def setUp(self):
+        url = "{}/oauth2/token?username={}&password={}&client_id={}&grant_type=password&scope=ALL:ALL" \
+        .format(TEST_AUTH_URL, MICROSHARE_USERNAME, MICROSHARE_PASSWORD, MICROSHARE_API_KEY)
+
+        response = post(url)
+        json = response.json()
+
+        token = json.get('access_token')
+        self.auth_headers = {
+            "Authorization": "Bearer {}".format(token)
+        }
 
     def test_get(self):
         url = "{}/share/com.hackforthesea.global.location".format(TEST_URL)
-        response = get(url, headers=authentication_headers())
-        print(response.json())
-        pass
+        response = get(url, headers=self.auth_headers)
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.json()['meta']['totalCount'] > 0)
+        
+    def test_append_no_tags(self):
+        url = "{}/share/com.hackforthesea.tests.functional.tmp".format(TEST_URL)
+        response = post(url, '{ "Test": "Null" }', headers=self.auth_headers)
+        self.assertEqual(response.status_code, 200)
+        obj_url = "{}{}?details=true".format(TEST_URL, response.json()['objs'][0]["url"])
+        echo_response = get(url, headers=self.auth_headers)
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.json()['meta']['totalCount'] > 0)
+        # TODO: Did the data carry over?
+        
+    #~ def test_append_with_tags(self):
+        #~ pass
+       
+    #~ def test_delete(self):
+        #~ url = "https://dapi.microshare.io/share/{}/{}".format(rec_type, id)
+        #~ response = delete(url, headers=self.auth_headers)
+        #~ print(response.json())
+        #~ pass
 
 if __name__ == '__main__':
     unittest.main()
@@ -54,27 +70,11 @@ if __name__ == '__main__':
 
 '''
 
-class MicroshareGetDeleteView(ProtectedResourceView):
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super(MicroshareGetDeleteView, self).dispatch(request, *args, **kwargs)
-
-    def get(self, request, rec_type, id):
-        url = "https://dapi.microshare.io/share/{}/{}".format(rec_type, id)
-        response = get(url, headers=authentication_headers())
-        return JsonResponse(response.json())
-
-    def delete(self, request, id, rec_type):
-        url = "https://dapi.microshare.io/share/{}/{}".format(rec_type, id)
-        response = delete(url, headers=authentication_headers())
-        return JsonResponse(response.json())
+def delete(self, request, id, rec_type):
+	
 
 
 class MicroshareListCreateView(ProtectedResourceView):
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super(MicroshareListCreateView, self).dispatch(request, *args, **kwargs)
-
     def get(self, request, rec_type=None, tags=''):
         # @type boolean
         # Will return matching objects with their details, false will only return main information
@@ -97,10 +97,5 @@ class MicroshareListCreateView(ProtectedResourceView):
         params = "?details={}&page={}&perPage={}{}".format(details,page,perPage, sort)
         url = "https://dapi.microshare.io/share/{}/{}{}".format(rec_type, cleantags(tags), params)
         response = get(url, headers=authentication_headers())
-        return JsonResponse(response.json())
-
-    def post(self, request, rec_type=None, tags=''):
-        url = "https://dapi.microshare.io/share/{}/{}".format(rec_type, cleantagsx(tags))
-        response = post(url, request.body, headers=authentication_headers())
         return JsonResponse(response.json())
 '''
