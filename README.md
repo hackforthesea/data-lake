@@ -1,6 +1,10 @@
 # Hack for the Sea Data Lake
 
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Build Status](https://travis-ci.org/hackforthesea/data-lake.svg?branch=master)](https://travis-ci.org/hackforthesea/data-lake)
+
 > Repository for Hack for the Sea data. Sponsored by [Microshare](https://microshare.io).
+
 
 ## Table of Contents
 
